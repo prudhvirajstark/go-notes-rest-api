@@ -21,12 +21,12 @@ jobs :
           run : go mod verify
 
         - name : Install lint checker
-          uses : go install golang.org/x/lint/golint@latest
+          run : go install golang.org/x/lint/golint@latest
 
         - name : Run golint
-          uses : golint ./..
+          run : golint ./..
 
         - name :  Build
-          uses : go build -v ./..
+          run : go build -v ./..
 
 
